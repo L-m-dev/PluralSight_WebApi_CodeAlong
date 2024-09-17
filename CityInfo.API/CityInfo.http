@@ -1,0 +1,29 @@
+@schema = https
+@hostname = localhost
+@port =  7284
+
+GET {{schema}}://{{hostname}}:{{port}}/api/v2/cities
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IktldmkiLCJmYW1pbHlfbmFtZSI6IkRvY3giLCJjaXR5IjoiQW50d2VyIiwibmJmIjoxNzI2NDU2NDkwLCJleHAiOjE3MjY0NjAwOTAsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyODQiLCJhdWQiOiJjaXR5aW5mb2FwaSJ9.NHcshXcnAGiYv8U7GsT_ov3_vFDGSvNTCJwcqFwXlSg
+###
+
+GET {{schema}}://{{hostname}}:{{port}}/api/v2/cities
+Accept:application/xml
+
+###
+
+POST {{schema}}://{{hostname}}:{{port}}/api/v2/cities/1/pointsofinterest
+Accept:application/json
+Content-Type:application/json
+{
+    "name":"whheels",
+    "description":"skies"
+}
+
+###
+
+POST  {{schema}}://{{hostname}}:{{port}}/api/authentication/authenticate
+Content-Type:application/json
+{
+    "username": "jont",
+    "password": "gggu"
+}
